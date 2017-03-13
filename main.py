@@ -1,7 +1,3 @@
-# Version 1
-
-#Use error by division to tell user they can't do that
-
 from __future__ import division
 from Tkinter import *
 
@@ -50,6 +46,12 @@ def equalButtonFunction(event):
     entry.insert(END, eval(x))
 def clearButtonFunction(event):
     entry.delete("1.0", END)
+def parentheses1ButtonFuction(event):
+    entry.insert(END, '(')
+def parentheses2ButtonFuction(event):
+    entry.insert(END, ')')
+def trigButtonFunction(event):
+    pass
 
 oneButton = Button(main, text="1", width=10, height=5)
 oneButton.place(x=10, y=50)
@@ -115,10 +117,21 @@ divButton = Button(main, text="/", width=10, height=5)
 divButton.place(x=280, y=350)
 divButton.bind('<Button-1>', divButtonFunction)
 
-clearButton = Button(main, text="Clear", width=49, height=5)
+clearButton = Button(main, text="Clear", width=10, height=5)
 clearButton.place(x=10, y=450)
 clearButton.bind('<Button-1>', clearButtonFunction)
 
+parentheses1Button = Button(main, text="(", width=10, height=5)
+parentheses1Button.place(x=100, y=450)
+parentheses1Button.bind('<Button-1>', parentheses1ButtonFuction)
+
+parentheses2Button = Button(main, text=")", width=10, height=5)
+parentheses2Button.place(x=190, y=450)
+parentheses2Button.bind('<Button-1>', parentheses2ButtonFuction)
+
+trigButton = Button(main, text="Trig", width=10, height=5)
+trigButton.place(x=280, y=450)
+trigButton.bind('<Button-1>', trigButtonFunction)
 
 
 
