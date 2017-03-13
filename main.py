@@ -1,4 +1,4 @@
-#Beta Development V2
+# Version 1
 
 #Use error by division to tell user they can't do that
 
@@ -115,10 +115,9 @@ divButton = Button(main, text="/", width=10, height=5)
 divButton.place(x=280, y=350)
 divButton.bind('<Button-1>', divButtonFunction)
 
-clearButton = Button(main, text="Clear", width=10, height=5)
+clearButton = Button(main, text="Clear", width=49, height=5)
 clearButton.place(x=10, y=450)
 clearButton.bind('<Button-1>', clearButtonFunction)
-
 
 
 
